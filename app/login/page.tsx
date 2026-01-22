@@ -201,8 +201,23 @@ export default function LoginPage() {
       <header className="border-b border-border bg-background">
         <div className="container mx-auto flex h-16 items-center justify-between px-4">
           <Link href="/" className="flex items-center gap-2">
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary">
-              <Briefcase className="h-5 w-5 text-primary-foreground" />
+            <div className="h-9 w-9 overflow-hidden rounded-lg">
+              <img 
+                src="/smktelkom.png" 
+                alt="CareerReady360 Logo" 
+                className="h-full w-full object-cover"
+                onError={(e) => {
+                  e.currentTarget.style.display = 'none';
+                  e.currentTarget.parentElement!.innerHTML = `
+                    <div class="flex h-9 w-9 items-center justify-center rounded-lg bg-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-primary-foreground">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        <path d="M12 8v4l2 2"/>
+                      </svg>
+                    </div>
+                  `;
+                }}
+              />
             </div>
             <span className="text-xl font-bold text-foreground">CareerReady360</span>
           </Link>
@@ -214,7 +229,6 @@ export default function LoginPage() {
           </Button>
         </div>
       </header>
-
       {/* Main content */}
       <main className="flex flex-1 items-center justify-center p-4">
         <Card className="w-full max-w-md border-border/50 shadow-lg">

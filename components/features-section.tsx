@@ -206,8 +206,7 @@ export function FeaturesSection() {
             </Card>
           ))}
         </div>
-
-        {/* CTA Section */}
+{/* 
         <div className="relative mx-auto mt-20 max-w-4xl overflow-hidden rounded-2xl border border-border/50">
           <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-primary/5 to-accent/10" />
           <div className="relative bg-gradient-to-r from-card/80 to-background/80 backdrop-blur-sm p-8 md:p-12">
@@ -234,7 +233,7 @@ export function FeaturesSection() {
               </div>
             </div>
           </div>
-        </div>
+        </div>  */}
       </div>
     </section>
   )

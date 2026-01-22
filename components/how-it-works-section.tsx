@@ -10,13 +10,13 @@ const steps = [
   {
     icon: FolderOpen,
     step: "02",
-    title: "Bangun Portofolio",
+    title: "Bangun Portofolio Digital",
     description: "Upload proyek, sertifikasi, dan dokumentasikan pengalaman PKL serta kegiatan ekskul.",
   },
   {
     icon: Target,
     step: "03",
-    title: "Ukur Kesiapan",
+    title: "Ukur Kesiapan Kerja",
     description: "Ikuti assessment untuk mengukur skor kesiapan kerja dan identifikasi area pengembangan.",
   },
   {
@@ -32,47 +32,77 @@ export function HowItWorksSection() {
     <section id="cara-kerja" className="bg-background py-20 md:py-32">
       <div className="container mx-auto px-4">
         <div className="mx-auto mb-16 max-w-3xl text-center">
-          <span className="mb-4 inline-block rounded-full bg-accent/10 px-4 py-1.5 text-sm font-medium text-accent">
-            Cara Kerja
-          </span>
-          <h2 className="mb-4 text-balance text-3xl font-bold tracking-tight text-foreground md:text-4xl lg:text-5xl">
-            4 Langkah Menuju Kesiapan Karier
+          <h2 className="mb-4 text-balance text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+            Mulai Perjalanan Karier Anda
           </h2>
           <p className="text-pretty text-lg text-muted-foreground">
-            Proses sederhana yang dirancang untuk memaksimalkan potensi dan kesiapan kerja kamu.
+            Proses sederhana dan terstruktur untuk membangun kesiapan kerja yang kompetitif
           </p>
         </div>
 
-        <div className="relative">
-          {/* Connection line */}
-          <div className="absolute left-1/2 top-0 hidden h-full w-px -translate-x-1/2 bg-gradient-to-b from-primary/50 via-primary/50 to-transparent lg:block" />
+        <div className="relative mx-auto max-w-6xl">
+          {/* Desktop Timeline */}
+          <div className="relative hidden md:block">
+            {/* Main timeline line */}
+            <div className="absolute left-0 right-0 top-6 h-1 bg-gradient-to-r from-border via-primary/30 to-border" />
+            
+            {/* Timeline dots */}
+            <div className="absolute left-0 top-6 -translate-y-1/2">
+              <div className="h-3 w-3 rounded-full bg-primary" />
+            </div>
+            <div className="absolute left-1/3 top-6 -translate-x-1/2 -translate-y-1/2">
+              <div className="h-3 w-3 rounded-full bg-primary" />
+            </div>
+            <div className="absolute left-2/3 top-6 -translate-x-1/2 -translate-y-1/2">
+              <div className="h-3 w-3 rounded-full bg-primary" />
+            </div>
+            <div className="absolute right-0 top-6 -translate-y-1/2">
+              <div className="h-3 w-3 rounded-full bg-primary" />
+            </div>
+          </div>
 
-          <div className="grid gap-8 lg:grid-cols-4">
+          <div className="grid gap-8 md:grid-cols-4">
             {steps.map((step, index) => (
-              <div key={step.step} className="relative">
-                {/* Mobile/Tablet connector */}
-                {index < steps.length - 1 && (
-                  <div className="absolute left-6 top-16 h-[calc(100%+2rem)] w-px bg-gradient-to-b from-primary/50 to-transparent lg:hidden" />
-                )}
-                
-                <div className="relative flex flex-col items-center text-center">
-                  {/* Step number circle */}
-                  <div className="relative mb-6">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-primary bg-background text-lg font-bold text-primary">
+              <div 
+                key={step.step} 
+                className="relative"
+              >
+                {/* Step card */}
+                <div className="relative rounded-xl border border-border bg-card p-6 transition-all duration-300 hover:border-primary/50 hover:shadow-lg">
+                  {/* Step number - desktop */}
+                  <div className="absolute -top-3 left-6 hidden md:block">
+                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-sm font-bold text-primary-foreground">
                       {step.step}
-                    </div>
-                    {/* Icon badge */}
-                    <div className="absolute -bottom-1 -right-1 flex h-6 w-6 items-center justify-center rounded-full bg-primary text-primary-foreground">
-                      <step.icon className="h-3.5 w-3.5" />
                     </div>
                   </div>
 
-                  <h3 className="mb-3 text-xl font-semibold text-foreground">{step.title}</h3>
-                  <p className="text-muted-foreground">{step.description}</p>
+                  {/* Step number - mobile */}
+                  <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary md:hidden">
+                    <span className="font-bold">{step.step}</span>
+                  </div>
+
+                  {/* Icon */}
+                  <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10">
+                    <step.icon className="h-7 w-7 text-primary" />
+                  </div>
+
+                  {/* Content */}
+                  <h3 className="mb-3 text-xl font-semibold text-foreground">
+                    {step.title}
+                  </h3>
+                  <p className="text-muted-foreground">
+                    {step.description}
+                  </p>
                 </div>
+
+                {/* Mobile connector */}
+                {index < steps.length - 1 && (
+                  <div className="absolute -bottom-8 left-1/2 h-8 w-px -translate-x-1/2 bg-gradient-to-b from-border to-transparent md:hidden" />
+                )}
               </div>
             ))}
           </div>
+
         </div>
       </div>
     </section>
