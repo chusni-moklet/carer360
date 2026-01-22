@@ -38,7 +38,7 @@ export function CTASection() {
                 className="h-14 gap-2 border-primary-foreground/30 bg-transparent px-8 text-base text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground" 
                 asChild
               >
-                <Link href="/partner">
+                <Link href="/daftar">
                   <Building2 className="h-5 w-5" />
                   Daftar Sebagai Mitra
                 </Link>
