@@ -26,7 +26,7 @@ export function CTASection() {
                 className="h-14 gap-2 px-8 text-base" 
                 asChild
               >
-                <Link href="/daftar">
+                <Link href="/daftar?type=siswa">
                   <GraduationCap className="h-5 w-5" />
                   Daftar Sebagai Siswa
                   <ArrowRight className="h-4 w-4" />
@@ -38,7 +38,7 @@ export function CTASection() {
                 className="h-14 gap-2 border-primary-foreground/30 bg-transparent px-8 text-base text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground" 
                 asChild
               >
-                <Link href="/daftar">
+                <Link href="/daftar?type=mitra">
                   <Building2 className="h-5 w-5" />
                   Daftar Sebagai Mitra
                 </Link>
