@@ -33,6 +33,8 @@ export default function DashboardIndexPage() {
             }
         }   
 
+        
+
         checkAuth()
     }, [router])
 
