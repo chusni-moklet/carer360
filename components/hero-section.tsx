@@ -114,6 +114,7 @@ export function HeroSection() {
                   </Button>
                 </div>
               </div>
+              
 
               {/* Trust indicators with counters */}
               <div className="flex flex-wrap items-center gap-6">
