@@ -2,12 +2,12 @@ import { Building2, Users, Target, TrendingUp, CheckCircle } from "lucide-react"
 
 const stats = [
   { 
-    value: "500+", 
+    value: "150+", 
     label: "SMK Terdaftar", 
     icon: Building2,
   },
   { 
-    value: "10.000+", 
+    value: "2.000+", 
     label: "Siswa Aktif", 
     icon: Users,
   },

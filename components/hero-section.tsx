@@ -118,12 +118,12 @@ export function HeroSection() {
               {/* Trust indicators with counters */}
               <div className="flex flex-wrap items-center gap-6">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-foreground">500+</div>
+                  <div className="text-2xl font-bold text-foreground">150+</div>
                   <div className="text-sm text-muted-foreground">Sekolah Mitra</div>
                 </div>
                 <div className="h-10 w-px bg-border" />
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-foreground">10.000+</div>
+                  <div className="text-2xl font-bold text-foreground">2.000+</div>
                   <div className="text-sm text-muted-foreground">Siswa Aktif</div>
                 </div>
                 <div className="h-10 w-px bg-border" />

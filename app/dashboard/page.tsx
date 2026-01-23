@@ -31,7 +31,7 @@ export default function DashboardIndexPage() {
                 console.error("Auth check error:", error)
                 router.push("/login")
             }
-        }
+        }   
 
         checkAuth()
     }, [router])
